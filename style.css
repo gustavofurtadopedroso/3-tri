@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --cor-fundo: #0a0e17;
+    --cor-container: #161b33;
+    --cor-destaque: #3a86ff;
+    --cor-texto: #e2f1fd;
+    --cor-detalhes: #ff5a8f;
+    --cor-progresso: #7b2cbf;
+}
+
+body {
+    background: radial-gradient(circle at center, var(--cor-fundo), #000);
+    color: var(--cor-texto);
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--cor-container);
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(58, 134, 255, 0.2);
+    border: 1px solid rgba(58, 134, 255, 0.1);
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--cor-destaque);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtitulo {
+    color: rgba(226, 241, 253, 0.7);
+    font-weight: 300;
+}
+
+.painel-pergunta {
+    background: rgba(22, 27, 51, 0.7);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.indicador-pergunta {
+    color: var(--cor-detalhes);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.texto-pergunta {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.lista-alternativas {
+    display: grid;
+    gap: 1rem;
+}
+
+.lista-alternativas button {
+    background: rgba(58, 134, 255, 0.1);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.lista-alternativas button:hover {
+    background: var(--cor-destaque);
+    color: var(--cor-container);
+    transform: translateY(-2px);
+}
+
+.painel-resultado {
+    display: none;
+    background: rgba(22, 27, 51, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.painel-resultado.mostrar {
+    display: block;
+    animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.progresso-jornada {
+    height: 10px;
+    background: rgba(226, 241, 253, 0.1);
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.progresso-jornada div {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cor-detalhes), var(--cor-progresso));
+    width: 0;
+    transition: width 1s ease;
+}
+
+.btn-reiniciar {
+    background: var(--cor-detalhes) !important;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.rodape {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: rgba(226, 241, 253, 0.5);
+}
