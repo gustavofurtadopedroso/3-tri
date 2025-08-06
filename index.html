@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra seu perfil digital neste jogo interativo sobre IA e tecnologia">
     <link rel="stylesheet" href="style.css">
     <title>Explorador de Futuro Digital</title>
 </head>
@@ -14,24 +15,33 @@
         </header>
         
         <main class="conteudo-jogo">
+            <!-- Painel de Pergunta -->
             <div class="painel-pergunta">
-                <div class="indicador-pergunta">Pergunta 1/5</div>
+                <div class="indicador-pergunta">Pergunta 1</div>
                 <div class="texto-pergunta"></div>
             </div>
             
+            <!-- Painel de Alternativas -->
             <div class="painel-alternativas">
                 <div class="lista-alternativas"></div>
             </div>
             
+            <!-- Painel de Resultado -->
             <div class="painel-resultado">
                 <div class="conteudo-resultado">
                     <h2>Seu Perfil Digital</h2>
-                    <p class="descricao-resultado"></p>
+                    <div class="descricao-resultado"></div>
                     <div class="progresso-jornada">
                         <div></div>
                     </div>
                     <button class="btn-reiniciar">Explorar Novamente</button>
                 </div>
+            </div>
+            
+            <!-- Painel de Feedback (adicionei este novo) -->
+            <div class="painel-feedback" style="display: none;">
+                <h3>Seu Caminho:</h3>
+                <div class="lista-feedback"></div>
             </div>
         </main>
         
@@ -40,6 +50,6 @@
         </footer>
     </div>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
